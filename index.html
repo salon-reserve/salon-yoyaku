@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>予約フォーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>予約フォーム</h2>
+
+    <form id="reservation-form" class="form-card">
+      <input id="name" name="name" placeholder="名前" required />
+      <input id="phone" name="phone" placeholder="電話番号" required />
+      <input id="email" name="email" placeholder="メール" />
+
+      <label for="menu">メニュー</label>
+      <select id="menu" name="menu" required>
+        <option value="">▼ メニューを選択してください</option>
+
+        <optgroup label="クーポン｜新規">
+          <option value="menu_001" data-duration="60">カット＋髪質改善 ￥6,600</option>
+          <option value="menu_002" data-duration="90">リタッチカラー＋髪質改善トリートメント ￥7,700</option>
+          <option value="menu_003" data-duration="90">全体カラー＋髪質改善トリートメント ￥9,240</option>
+          <option value="menu_004" data-duration="120">カット＋カラー＋髪質改善トリートメント ￥11,220</option>
+          <option value="menu_005" data-duration="180">カット＋カラー＋縮毛矯正 ￥24,640</option>
+          <option value="menu_006" data-duration="60">メンズカット ￥3,300</option>
+          <option value="menu_007" data-duration="60">メンズカット ￥4,455</option>
+          <option value="menu_008" data-duration="120">メンズカット＋カラー ￥12,375</option>
+          <option value="menu_009" data-duration="60">メンズカット＋スパ ￥6,435</option>
+          <option value="menu_010" data-duration="120">メンズカット＋パーマ ￥12,375</option>
+          <option value="menu_011" data-duration="180">ダブルカラー ￥16,500</option>
+          <option value="menu_012" data-duration="210">ダブルカラー＋カット ￥18,700</option>
+          <option value="menu_013" data-duration="180">ハイライト ￥16,500</option>
+        </optgroup>
+
+        <optgroup label="クーポン｜全員">
+          <option value="menu_020" data-duration="120">カット＋カラー ￥13,200</option>
+          <option value="menu_021" data-duration="120">エクステ60枚</option>
+          <option value="menu_022" data-duration="180">カット＋カラー＋エクステ</option>
+        </optgroup>
+
+        <optgroup label="学割U24">
+          <option value="menu_030" data-duration="60">カット＋トリートメント</option>
+          <option value="menu_031" data-duration="120">カット＋カラー＋TR</option>
+        </optgroup>
+
+        <optgroup label="カット">
+          <option value="menu_100" data-duration="60">レディースカット</option>
+          <option value="menu_101" data-duration="60">メンズカット</option>
+          <option value="menu_102" data-duration="30">Jrカット</option>
+          <option value="menu_103" data-duration="30">バングカット</option>
+        </optgroup>
+
+        <optgroup label="カラー">
+          <option value="menu_200" data-duration="90">リタッチ</option>
+          <option value="menu_201" data-duration="90">ショート</option>
+          <option value="menu_202" data-duration="120">セミロング</option>
+          <option value="menu_203" data-duration="120">ロング</option>
+          <option value="menu_204" data-duration="150">ブリーチリタッチ</option>
+          <option value="menu_205" data-duration="180">ブリーチショート</option>
+          <option value="menu_206" data-duration="180">ブリーチセミロング</option>
+          <option value="menu_207" data-duration="210">ブリーチロング</option>
+          <option value="menu_208" data-duration="180">ハイライト（ブリーチ有）</option>
+          <option value="menu_209" data-duration="150">ハイライト（ブリーチ無）</option>
+        </optgroup>
+
+        <optgroup label="パーマ">
+          <option value="menu_300" data-duration="120">スタンダード</option>
+          <option value="menu_301" data-duration="150">スパイラル</option>
+          <option value="menu_302" data-duration="150">ツイスト</option>
+        </optgroup>
+
+        <optgroup label="縮毛矯正">
+          <option value="menu_400" data-duration="90">顔周り</option>
+          <option value="menu_401" data-duration="150">リタッチ</option>
+          <option value="menu_402" data-duration="180">ショート</option>
+          <option value="menu_403" data-duration="210">セミロング</option>
+          <option value="menu_404" data-duration="240">ロング</option>
+        </optgroup>
+
+        <optgroup label="ストレート">
+          <option value="menu_500" data-duration="120">ショート</option>
+          <option value="menu_501" data-duration="150">セミロング</option>
+          <option value="menu_502" data-duration="180">ロング</option>
+        </optgroup>
+
+        <optgroup label="トリートメント">
+          <option value="menu_600" data-duration="90">酸熱</option>
+          <option value="menu_601" data-duration="60">5step</option>
+        </optgroup>
+
+        <optgroup label="その他">
+          <option value="menu_700" data-duration="30">ヘッドスパ</option>
+          <option value="menu_701" data-duration="30">シャンプー</option>
+          <option value="menu_702" data-duration="30">スタイリング</option>
+          <option value="menu_703" data-duration="30">眉カット</option>
+        </optgroup>
+      </select>
+
+      <input type="date" id="date" name="date" required />
+
+      <select id="stylist" name="stylist" required>
+        <option value="">担当者選択</option>
+        <option value="指名なし">指名なし</option>
+        <option value="Kazu">Kazu</option>
+        <option value="Masa">Masa</option>
+      </select>
+
+      <textarea id="note" name="note" placeholder="備考"></textarea>
+
+      <div id="time-message" class="time-message">日時・担当・メニューを選択してください</div>
+      <div id="time-slots" class="time-slots"></div>
+
+      <input type="hidden" id="time" name="time" />
+      <input type="hidden" id="duration" name="duration" />
+
+      <button type="submit" id="submit-btn">予約する</button>
+    </form>
+  </div>
+
+  <div id="loading-overlay" class="loading-overlay" aria-hidden="true">
+    <div class="loading-box">
+      <div class="spinner"></div>
+      <p id="loading-text">読み込み中...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
