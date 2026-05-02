@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>予約フォーム</title>
+  <title>Beautysalon - Salju -</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div class="container">
-    <h2>予約フォーム</h2>
+    <h2>Beautysalon - Salju -</h2>
+
+    <div class="form-hero-image">
+  <img src="images/salju-yoyaku.PNG" alt="サロンイメージ">
+</div>
 
     <form id="reservation-form" class="form-card">
       <input id="name" name="name" placeholder="名前" required />
@@ -111,7 +115,7 @@
 
       <textarea id="note" name="note" placeholder="備考"></textarea>
 
-      <div id="time-message" class="time-message">日時・担当・メニューを選択してください</div>
+      <div id="time-message" class="time-message">日時・担当・メニューを選択してください。<br>ご新規様は備考欄に『新規』と記載してください。</div>
       <div id="time-slots" class="time-slots"></div>
 
       <input type="hidden" id="time" name="time" />

@@ -139,3 +139,17 @@ button:disabled {
     transform: rotate(360deg);
   }
 }
+.form-hero-image {
+  width: 100%;
+  margin: 0 0 20px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(216, 107, 147, 0.12);
+}
+
+.form-hero-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
+}
